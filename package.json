@@ -1,0 +1,23 @@
+{
+  "name": "emoji_roulette",
+  "version": "1.0.0",
+  "description": "Emoji Roulette is a social drinking game",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JsonLitz/Emoji_Roulette.git"
+  },
+  "author": "jsonLitz, ASchurz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JsonLitz/Emoji_Roulette/issues"
+  },
+  "homepage": "https://github.com/JsonLitz/Emoji_Roulette#readme",
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  }
+}
