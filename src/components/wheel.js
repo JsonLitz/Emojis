@@ -1,4 +1,6 @@
-// import React from 'react'
+import React from 'react'
+
+const Wheel = React.createClass ({
 
 <div id="wheel">
        <div id="inner-wheel">
@@ -352,3 +354,7 @@ for (i=0; i < emojiClass.length; i++) {
 
 
 });
+
+})
+
+export default Clock
