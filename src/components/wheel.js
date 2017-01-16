@@ -24,7 +24,6 @@ const Wheel = React.createClass ({
 var degree = 1800;
 var clicks = 0;
 
-$(document).ready(function(){
 
 //hide spin history on load
 $(function(){
@@ -71,32 +70,25 @@ for (i=0; i < emojiClass.length; i++) {
 		console.log(extraDegree);
 
 
-		var wedge7CoorA = 22.5;
-		var wedge7CoorB = 67.5;
-		var wedge6CoorA = 67.5;
-		var wedge6CoorB = 112.5;
-		var wedge5CoorA = 112.5;
-		var wedge5CoorB = 157.5;
-		var wedge4CoorA = 157.5;
-		var wedge4CoorB = 202.5;
-		var wedge3CoorA = 202.5;
-		var wedge3CoorB = 247.5;
-		var wedge2CoorA = 247.5;
-		var wedge2CoorB = 292.5;
-		var wedge1CoorA = 292.5;
-		var wedge1CoorB = 337.5;
+    var wedgeName = ["wedge7CoorA", "wedge7CoorB", "wedge6CoorA", "wedge6CoorB", "wedge5CoorA", "wedge5CoorB", "wedge4CoorA", "wedge4CoorB", "wedge3CoorA", "wedge3CoorB", "wedge2CoorA", "wedge2CoorB", "wedge1CoorA", "wedge1CoorB"]
+    var wedgeDegrees = [22.5, 67.5, 67.5, 112.5, 112.5, 157.5, 157.5, 202.5, 202.5, 247.5, 247.5, 292.5, 292.5, 337.5];
 
-    // var wedgeName = ["wedge7CoorA", "wedge7CoorB", "wedge6CoorA", "wedge6CoorB", "wedge5CoorA", "wedge5CoorB", "wedge4CoorA", "wedge4CoorB", "wedge3CoorA", "wedge3CoorB", "wedge2CoorA", "wedge2CoorB", "wedge1CoorA", "wedge1CoorB"]
-    // var wedgeDegrees [22.5, 67.5, 67.5, 112.5, 112.5, 157.5, 157.5, 202.5, 202.5, 247.5, 247.5, 292.5, 292.5, 337.5];
+    for (i=0; i < wedgeName.length; i++) {
 
+      var plus = i + 1;
+      console.log(plus);
 
-    function emojiAppender() {
-    			if (extraDegree > wedge7CoorA && extraDegree < wedge7CoorB) {
-    				console.log($('#wedge_7').html());
-    				setTimeout(function(){
-    					$("#spin-history").append($('#wedge_7').html() + " ");
-              $("#wedge_7").addClass('animated bounceIn');
-    				},6000)
+      function emojiAppender() {
+
+			if (extraDegree > wedgeDegrees[i] && extraDegree < wedgeDegrees[plus]) {
+
+        console.log($(wedge[i]).html());
+				setTimeout(function(){
+
+          $("#spin-history").append($(wedge[i]).html() + " ");
+          $(wedge[i]).addClass('animated bounceIn');
+
+				},6000)
 
         setTimeout(function(){
           $("#wedge_1").fadeOut(3000);
@@ -118,6 +110,16 @@ for (i=0; i < emojiClass.length; i++) {
           $("#wedge_8").fadeIn(2000);
         },8500)
 			}
+    }
+
+
+
+
+
+
+
+
+
 
 			else if (extraDegree > wedge6CoorA && extraDegree < wedge6CoorB) {
 				console.log($('#wedge_6').html());
@@ -351,9 +353,6 @@ for (i=0; i < emojiClass.length; i++) {
 
 		});
 	});
-
-
-});
 
 })
 
