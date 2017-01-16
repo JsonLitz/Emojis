@@ -58,8 +58,6 @@ for (i=0; i < emojiClass.length; i++) {
 }
 
 
-
-
 	/*WHEEL SPIN FUNCTION*/
 	$('#spin').click(function(){
     $(".wedge").removeClass('animated bounceIn');
@@ -86,14 +84,17 @@ for (i=0; i < emojiClass.length; i++) {
 		var wedge1CoorA = 292.5;
 		var wedge1CoorB = 337.5;
 
+    // var wedgeName = ["wedge7CoorA", "wedge7CoorB", "wedge6CoorA", "wedge6CoorB", "wedge5CoorA", "wedge5CoorB", "wedge4CoorA", "wedge4CoorB", "wedge3CoorA", "wedge3CoorB", "wedge2CoorA", "wedge2CoorB", "wedge1CoorA", "wedge1CoorB"]
+    // var wedgeDegrees [22.5, 67.5, 67.5, 112.5, 112.5, 157.5, 157.5, 202.5, 202.5, 247.5, 247.5, 292.5, 292.5, 337.5];
 
-		function emojiAppender() {
-			if (extraDegree > wedge7CoorA && extraDegree < wedge7CoorB) {
-				console.log($('#wedge_7').html());
-				setTimeout(function(){
-					$("#spin-history").append($('#wedge_7').html() + " ");
-          $("#wedge_7").addClass('animated bounceIn');
-				},6000)
+
+    function emojiAppender() {
+    			if (extraDegree > wedge7CoorA && extraDegree < wedge7CoorB) {
+    				console.log($('#wedge_7').html());
+    				setTimeout(function(){
+    					$("#spin-history").append($('#wedge_7').html() + " ");
+              $("#wedge_7").addClass('animated bounceIn');
+    				},6000)
 
         setTimeout(function(){
           $("#wedge_1").fadeOut(3000);
