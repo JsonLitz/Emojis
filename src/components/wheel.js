@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 
 <div id="wheel">
        <div id="inner-wheel">
@@ -44,54 +44,19 @@ $("#setup").click( function(event){
 		});
 
 //on land, get the id of that wedge and append it to the history
+//make an array and loop through the array
+var emojiClass = ["emoji_1", "emoji_2", "emoji_3", "emoji_4", "emoji_5", "emoji_6", "emoji_7", "emoji_8"];
+var wedge = ["wedge_1", "wedge_2", "wedge_3", "wedge_4", "wedge_5", "wedge_6", "wedge_7", "wedge_8"];
+var dropdown = ["dropdown_1", "dropdown_2", "dropdown_3", "dropdown_4", "dropdown_5", "dropdown_6", "dropdown_7", "dropdown_8"];
 
-$(".emoji_1").click( function(event){
-	  console.log(this.id);
-		document.getElementById("wedge_1").innerHTML = this.id;
-		document.getElementById("dropdown_1").innerHTML = this.id + " | " + $(this).attr("data-description");
-});
+for (i=0; i < emojiClass.length; i++) {
+  $(emojiClass[i]).click( function(event){
+  	  console.log(this.id);
+  		document.getElementById(wedge[i]).innerHTML = this.id;
+  		document.getElementById(dropdown[i]).innerHTML = this.id + " | " + $(this).attr("data-description");
+  });
+}
 
-$(".emoji_2").click( function(event){
-	  console.log(this.id);
-		document.getElementById("wedge_2").innerHTML = this.id;
-		document.getElementById("dropdown_2").innerHTML = this.id + " | " + $(this).attr("data-description");
-});
-
-$(".emoji_3").click( function(event){
-	  console.log(this.id);
-		document.getElementById("wedge_3").innerHTML = this.id;
-		document.getElementById("dropdown_3").innerHTML = this.id + " | " + $(this).attr("data-description");
-});
-
-$(".emoji_4").click( function(event){
-	  console.log(this.id);
-		document.getElementById("wedge_4").innerHTML = this.id;
-		document.getElementById("dropdown_4").innerHTML = this.id + " | " + $(this).attr("data-description");
-});
-
-$(".emoji_5").click( function(event){
-	  console.log(this.id);
-		document.getElementById("wedge_5").innerHTML = this.id;
-		document.getElementById("dropdown_5").innerHTML = this.id + " | " + $(this).attr("data-description");
-});
-
-$(".emoji_6").click( function(event){
-	  console.log(this.id);
-		document.getElementById("wedge_6").innerHTML = this.id;
-		document.getElementById("dropdown_6").innerHTML = this.id + " | " + $(this).attr("data-description");
-});
-
-$(".emoji_7").click( function(event){
-	  console.log(this.id);
-		document.getElementById("wedge_7").innerHTML = this.id;
-		document.getElementById("dropdown_7").innerHTML = this.id + " | " + $(this).attr("data-description");
-});
-
-$(".emoji_8").click( function(event){
-	  console.log(this.id);
-		document.getElementById("wedge_8").innerHTML = this.id;
-		document.getElementById("dropdown_8").innerHTML = this.id + " | " + $(this).attr("data-description");
-});
 
 
 
